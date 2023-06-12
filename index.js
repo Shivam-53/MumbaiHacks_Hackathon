@@ -2,7 +2,7 @@ require ("dotenv").config();
 const express=require("express")
 const app=express();
 const axios = require('axios');
-const email = 'hkd159@gmail.com';
+const email = process.env.email
 const key=process.env.apiKey
 app.get('/',(req,res)=>{
 async function verifyEmail(email, key) {
